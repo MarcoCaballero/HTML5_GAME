@@ -41,13 +41,13 @@ $(window).load(function () {
 });
 
 var game = {
-	// Start initializing objects, preloading assets and display start screen
+    // Start initializing objects, preloading assets and display start screen
     init: function () {
         levels.init();
         loader.init();
         mouse.init();
 
-		// Load All Sound Effects and Background Music
+        // Load All Sound Effects and Background Music
 
         // FANTASY GAME BACKGROUND (Royalty-Free.)
         //http://soundimage.org/fantasywonder/
@@ -61,7 +61,7 @@ var game = {
         };
 
 
-		// Hide all game layers and display the start screen
+        // Hide all game layers and display the start screen
         $('.gamelayer').hide();
         $('#gamestartscreen').show();
 
@@ -382,14 +382,14 @@ var levels = {
             background: 'futuristic-background_new',
             entities: [
                 { type: "ground", name: "dirt", x: 500, y: 440, width: 1000, height: 20, isStatic: true },
-                { type: "ground", name: "glass_futuristic", x: 185, y: 390, width: 30, height: 80, isStatic: true },
+                { type: "ground", name: "wood", x: 185, y: 390, width: 30, height: 80, isStatic: true },
 
                 { type: "block", name: "glass_futuristic", x: 520, y: 380, angle: 90, width: 100, height: 25 },
                 { type: "block", name: "glass", x: 520, y: 280, angle: 90, width: 100, height: 25 },
                 { type: "villain", name: "burger_futuristic", x: 520, y: 180, calories: 590 },
 
                 { type: "block", name: "glass_futuristic", x: 620, y: 380, angle: 90, width: 100, height: 25 },
-                { type: "villain", name: "sodacan", x: 620, y: 280, calories: 420 },
+                { type: "villain", name: "sodacan", x: 620, y: 280, calories: 150 },
 
                 { type: "block", name: "glass_futuristic", x: 720, y: 380, angle: 90, width: 100, height: 25 },
                 { type: "block", name: "glass", x: 720, y: 280, angle: 90, width: 100, height: 25 },
@@ -405,7 +405,7 @@ var levels = {
             background: 'futuristic-background_new',
             entities: [
                 { type: "ground", name: "dirt", x: 500, y: 440, width: 1000, height: 20, isStatic: true },
-                { type: "ground", name: "glass_futuristic", x: 185, y: 390, width: 30, height: 80, isStatic: true },
+                { type: "ground", name: "wood", x: 185, y: 390, width: 30, height: 80, isStatic: true },
 
                 { type: "block", name: "glass_futuristic", x: 820, y: 380, angle: 90, width: 100, height: 25 },
                 { type: "block", name: "glass_futuristic", x: 720, y: 380, angle: 90, width: 100, height: 25 },
@@ -431,7 +431,7 @@ var levels = {
             background: 'futuristic-background_new',
             entities: [
                 { type: "ground", name: "dirt", x: 500, y: 440, width: 1000, height: 20, isStatic: true },
-                { type: "ground", name: "glass_futuristic", x: 185, y: 390, width: 30, height: 80, isStatic: true },
+                { type: "ground", name: "wood", x: 185, y: 390, width: 30, height: 80, isStatic: true },
 
                 { type: "block", name: "glass_futuristic", x: 820, y: 380, angle: 90, width: 100, height: 25 },
                 { type: "block", name: "glass_futuristic", x: 720, y: 380, angle: 90, width: 100, height: 25 },
@@ -449,7 +449,7 @@ var levels = {
 
                 { type: "villain", name: "burger_futuristic", x: 670, y: 280, calories: 420 },
                 { type: "villain", name: "fries", x: 765, y: 275, calories: 150 },
-                { type: "villain", name: "sodacan", x: 715, y: 155, calories: 350 },
+                { type: "villain", name: "sodacan", x: 715, y: 155, calories: 150 },
 
                 { type: "hero", name: "futuristic-ball-blue", x: 30, y: 415 },
                 { type: "hero", name: "futuristic-ball-pink", x: 90, y: 405 },
@@ -461,7 +461,7 @@ var levels = {
             background: 'futuristic-background_new',
             entities: [
                 { type: "ground", name: "dirt", x: 500, y: 440, width: 1000, height: 20, isStatic: true },
-                { type: "ground", name: "glass_futuristic", x: 185, y: 390, width: 30, height: 80, isStatic: true },
+                { type: "ground", name: "wood", x: 185, y: 390, width: 30, height: 80, isStatic: true },
 
                 { type: "block", name: "glass_futuristic", x: 810, y: 380, angle: 90, width: 100, height: 25 },
                 { type: "block", name: "glass_futuristic", x: 720, y: 380, angle: 90, width: 100, height: 25 },
@@ -482,7 +482,7 @@ var levels = {
                 { type: "villain", name: "burger_futuristic", x: 715, y: 30, calories: 590 },
                 { type: "villain", name: "burger_futuristic", x: 670, y: 275, calories: 420 },
                 { type: "villain", name: "fries", x: 765, y: 275, calories: 150 },
-                { type: "villain", name: "sodacan", x: 715, y: 155, calories: 350 },
+                { type: "villain", name: "sodacan", x: 715, y: 155, calories: 150 },
 
 
                 { type: "hero", name: "futuristic-ball-blue", x: 30, y: 415 },
@@ -497,7 +497,7 @@ var levels = {
         var html = "";
         for (var i = 0; i < levels.data.length; i++) {
             var level = levels.data[i];
-            html +=  '<input type="button" value="' + (i + 1) + '">';
+            html += '<input type="button" value="' + (i + 1) + '">';
         };
         $('#levelselectscreen').html(html);
 
@@ -539,6 +539,12 @@ var levels = {
 
 var entities = {
     definitions: {
+        "wood": {
+            fullHealth: 500,
+            density: 0.7,
+            friction: 0.4,
+            restitution: 0.4,
+        },
         "glass": {
             fullHealth: 100,
             density: 2.4,

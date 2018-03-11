@@ -114,3 +114,30 @@ endingscreen {
     text-shadow: 0 0 2px #000;
 	color:white;
 }
+
+.play_button {
+    animation: playAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    background-repeat: no-repeat;
+    min-width: 123px;
+    min-height: 123px;
+    box-shadow: 8px 6px 4px 5px #000000b5;
+    border-radius: 50%;
+}
+
+@keyframes playAnimation {
+    0% {
+        background-image: url('../img/icons/play_futuristic.png');
+    }
+    33% {
+        background-image: url('../img/icons/play_futuristic_1.png');
+    }
+    66% {
+        background-image: url('../img/icons/play_futuristic_2.png');
+    }
+    100% {
+        background-image: url('../img/icons/play_futuristic.png');
+    }
+}
