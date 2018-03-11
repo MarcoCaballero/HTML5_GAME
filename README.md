@@ -1,3 +1,4 @@
+
 # PROJECT 1  - MULTIMEDIA
 
 ### FUTURISTIC BALLS GAME
@@ -25,6 +26,9 @@ Easy way to try the game and develop your own:
 #####  [ZIP]
   - Click on the ***clone/download*** button and download as zip.
   - Then open the `index.html` (on the root folder)  with your favorite browser.
+
+##### LOOK EXAMPLES:
+https://raw.githubusercontent.com/MarcoCaballero/HTML5_GAME/master/img/icons/example.png
 
 Enjoy =)
 
