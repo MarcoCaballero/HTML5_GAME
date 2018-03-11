@@ -28,10 +28,12 @@ Easy way to try the game and develop your own:
   - Then open the `index.html` (on the root folder)  with your favorite browser.
 
 ##### LOOK EXAMPLES:
-https://raw.githubusercontent.com/MarcoCaballero/HTML5_GAME/master/img/icons/example.png
+  ![enter image description here](https://raw.githubusercontent.com/MarcoCaballero/HTML5_GAME/master/img/example.png)
 
-Enjoy =)
 
+
+
+# Enjoy =)
 
 #### Authors:
 - [Marco Caballero.](https://github.com/MarcoCaballero)
